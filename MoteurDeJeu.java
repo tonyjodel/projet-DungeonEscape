@@ -1,16 +1,15 @@
 import javax.swing.JFrame;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class MoteurDeJeu extends JFrame implements KeyListener {
     private Monde monde;
     private Joueur joueur;
-    public MoteurDeJeu() {
+    public MoteurDeJeu(int x) {
         joueur = new Joueur(1, 1, 50);
-        monde = new Monde(5, 5);
-        monde.getSalle((int)(Math.random() * 5),(int)(Math.random() * 5)).setArme(new Arme("Couteau", "blanche", 100, 0));
-        monde.getSalle((int)(Math.random() * 5),(int)(Math.random() * 5)).setArme(new Arme("Pistolet", "feu", 100, 6));
+        monde = new Monde(x, x);
+        monde.getSalle((int)(Math.random() * x),(int)(Math.random() * x)).setArme(new Arme("Couteau", "blanche", 100, 0));
+        monde.getSalle((int)(Math.random() * x),(int)(Math.random() * x)).setArme(new Arme("Pistolet", "feu", 100, 6));
         setTitle("Dungeon Escape");
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
