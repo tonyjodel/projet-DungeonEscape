@@ -1,6 +1,9 @@
-
+import java.util.Scanner;
 public class Jeu {
     public static void main(String[] args) {
-        new MoteurDeJeu();
-    }
+        Scanner scanner = new Scanner(System.in);
+            System.out.println("Choisir une difficulté: ");
+            int nombre = scanner.nextInt();
+            new MoteurDeJeu(nombre);
+        }
 }
