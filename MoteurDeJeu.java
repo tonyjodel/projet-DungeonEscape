@@ -81,7 +81,7 @@ public class MoteurDeJeu extends JFrame implements KeyListener {
                 }}
 
             else if (touche=='q') {
-                if (joueur.getX() > 0) {
+                if (joueur.getX() <= 0) {
                 System.out.println("Tu ne peux pas aller plus à l'ouest.");
                 }else{
                 Salle salle = monde.getSalle(joueur.getX(), joueur.getY());
